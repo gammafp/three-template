@@ -1,5 +1,7 @@
 import { App } from './app';
-new App({
-	width: 1240,
-	height: 720
+
+const app = new App(document.querySelector('#game-container'));
+
+window.addEventListener('resize', () => {
+	app.onResize();
 });

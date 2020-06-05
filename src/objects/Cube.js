@@ -4,7 +4,7 @@ export class Cube extends Mesh {
 	constructor(size) {
 		super();
 		const loader = new TextureLoader();
-		const map = loader.load('./textures/uv_test_bw.png');
+		const map = loader.load('./assets/textures/uv_test_bw.png');
 		map.encoding = sRGBEncoding;
 		map.anisotropy = 16;
 
