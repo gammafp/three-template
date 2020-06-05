@@ -11,6 +11,11 @@ module.exports = {
 		filename: 'bundle.js',
 		path: path.resolve(__dirname, 'dist')
 	},
+	optimization: {
+		splitChunks: {
+			chunks: 'all'
+		}
+	},
 	resolve: {
 		extensions: ['.js']
 	},
@@ -23,6 +28,10 @@ module.exports = {
 				{
 					from: `${routeApp}/assets`,
 					to: 'assets'
+				},
+				{
+					from: './style',
+					to: 'style'
 				}
 			]
 		}
