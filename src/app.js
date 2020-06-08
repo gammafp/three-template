@@ -1,6 +1,6 @@
-import { PerspectiveCamera, Vector3, WebGLRenderer, GammaEncoding, Clock } from 'three';
+import { PerspectiveCamera, Vector3, WebGLRenderer, GammaEncoding, Clock, sRGBEncoding, PCFShadowMap } from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import Scene1 from './scenes/scene1';
+import Scene1 from './scenes/Scene1';
 
 export class App {
 	constructor(container) {
@@ -26,11 +26,11 @@ export class App {
 		// this.renderer.outputEncoding = GammaEncoding;
 
 		// sRGBEncoding
-        // this.renderer.outputEncoding = THREE.sRGBEncoding;
+		// this.renderer.outputEncoding = sRGBEncoding;
 
 		// ## Shadows
         // this.renderer.shadowMap.enabled = true;
-        // this.renderer.shadowMap.type = THREE.PCFShadowMap;
+        // this.renderer.shadowMap.type = PCFShadowMap;
 
 		// ## Light's config
 		this.renderer.physicallyCorrectLights = true;

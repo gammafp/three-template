@@ -1,4 +1,4 @@
-import { BoxGeometry, Color, Mesh, MeshStandardMaterial, TextureLoader, sRGBEncoding } from 'three';
+import { Mesh, MeshStandardMaterial, TextureLoader, sRGBEncoding, BoxBufferGeometry } from 'three';
 
 export class Cube extends Mesh {
 	constructor(size) {
@@ -8,7 +8,7 @@ export class Cube extends Mesh {
 		map.encoding = sRGBEncoding;
 		map.anisotropy = 16;
 
-		this.geometry = new BoxGeometry(size, size, size);
+		this.geometry = new BoxBufferGeometry(size, size, size);
 		this.material = new MeshStandardMaterial({ map });
 	}
 }
