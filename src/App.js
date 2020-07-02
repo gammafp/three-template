@@ -12,7 +12,7 @@ export class App {
 		// ## Camera's config
 		this.camera = new PerspectiveCamera(35, this.container.clientWidth / this.container.clientHeight, 0.1, 10000);
 		this.camera.position.set(10, 10, 10);
-		this.camera.lookAt(new Vector3(0, 0, 0));
+		this.camera.lookAt(0, 0, 0);
 
 		// ## Renderer's config
 		this.renderer = new WebGLRenderer({
